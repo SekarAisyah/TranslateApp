@@ -18,7 +18,7 @@ object TranslatorApiClient {
             .addInterceptor { chain ->
                 val request = chain.request().newBuilder()
                     .header("X-RapidAPI-Host", "google-translate1.p.rapidapi.com")
-                    .header("X-RapidAPI-Key", "e170452ebcmsh5e04bb89adf8217p10b789jsncb5122d12601")
+                    .header("X-RapidAPI-Key", "45d322ce00mshf7f13126db1e389p1c5bfajsn75ea01c857d5")
                     .header("Content-Type", "application/x-www-form-urlencoded")
                     .build()
                 chain.proceed(request)

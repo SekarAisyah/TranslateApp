@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="40dp"
+    android:layout_marginTop="20dp"
     android:layout_marginBottom="30dp"
     android:layout_marginHorizontal="20dp"
     android:padding="10dp">
@@ -25,7 +25,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="230dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_home_foreground"
             tools:ignore="ContentDescription" />
@@ -108,17 +108,26 @@
         android:layout_marginTop="16dp"
         app:cardUseCompatPadding="true">
 
-        <EditText
-            android:id="@+id/myEditText"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:padding="16dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:hint="@string/enter_text"
-            android:autofillHints=""
-            tools:ignore="TextFields,VisualLintTextFieldSize" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/myEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_text"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="TextFields,VisualLintTextFieldSize"
+                android:maxLines="5"
+                android:scrollbars="vertical" />
+
+        </ScrollView>
 
     </androidx.cardview.widget.CardView>
 
@@ -132,13 +141,29 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="20dp">
 
-        <TextView
-            android:id="@+id/myTextView"
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     </androidx.cardview.widget.CardView>
 
