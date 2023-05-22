@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TranslateApp</string>
+    <string name="title_home">"Transcend language. Connect globally!"</string>
+    <string name="enter_text">Enter text</string>
+    <string name="translate_now">Translate Now</string>
+
+</resources>
